@@ -5,10 +5,10 @@ function obtenerMayor(x, y) {
   // Devuelve el número más grande
   // Si son iguales, devuelve cualquiera de los dos
   // Tu código:
-  if(x >= y){
+  if (x >= y) {
     return x
   }
-  else if (y > x){
+  else if (y > x) {
     return y
   }
 }
@@ -17,7 +17,7 @@ function mayoriaDeEdad(edad) {
   //Determinar si la persona según su edad puede ingresar a un evento.
   //Si tiene 18 años ó más, devolver --> "Allowed"
   //Si es menor, devolver --> "Not allowed"
-  if (edad >= 18){
+  if (edad >= 18) {
     return "Allowed"
   }
   else {
@@ -31,10 +31,10 @@ function conection(status) {
   //Cuando el estado es igual a 2, el usuario está "Away"
   //De lo contrario, presumimos que el usuario está "Offline"
   //Devolver el estado de conexión de usuario en cada uno de los casos.
-  if (status === 1){
+  if (status === 1) {
     return "Online"
   }
-  else if (status === 2){
+  else if (status === 2) {
     return "Away"
   }
   else {
@@ -49,13 +49,13 @@ function saludo(idioma) {
   // Si "idioma" es "ingles", devuelve "Hello!"
   // Si "idioma" no es ninguno de los anteiores o es `undefined` devuelve "Hola!"
   // Tu código:
-  if (idioma == "aleman"){
+  if (idioma == "aleman") {
     return "Guten Tag!"
   }
-  else if (idioma == "mandarin"){
+  else if (idioma == "mandarin") {
     return "Ni Hao!"
   }
-  else if (idioma == "ingles"){
+  else if (idioma == "ingles") {
     return "Hello!"
   }
   else {
@@ -116,16 +116,16 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
-  if(numero % 3 == 0 && numero % 5 != 0){
+  if(numero % 3 == 0 && numero % 5 != 0) {
     return "fizz"
   }
-  else if (numero % 3 != 0 && numero % 5 == 0){
+  else if (numero % 3 != 0 && numero % 5 == 0) {
     return "buzz"
   }
-  else if (numero % 3 == 0 && numero % 5 == 0){
+  else if (numero % 3 == 0 && numero % 5 == 0) {
     return "fizzbuzz"
   }
-  else if (numero % 3 != 0 && numero % 5 != 0){
+  else if (numero % 3 != 0 && numero % 5 != 0) {
     return numero
   }
 }
@@ -138,16 +138,16 @@ function operadoresLogicos(num1, num2, num3) {
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false.
   
-  if (num1 == 0 || num2 == 0 || num3 == 0){
+  if (num1 == 0 || num2 == 0 || num3 == 0) {
     return "Error"
   }
-  else if (num1 < 0 || num2 < 0 || num3 < 0){
+  else if (num1 < 0 || num2 < 0 || num3 < 0) {
     return "Hay negativos"
   }
-  else if(num1 > num2 && num1 > num3 && num1 > 0){
+  else if (num1 > num2 && num1 > num3 && num1 > 0) {
     return "Número 1 es mayor y positivo"
   } 
-  else if (num3 > num1 && num3 > num2){
+  else if (num3 > num1 && num3 > num2) {
     return num3 + 1
   }
   else {
@@ -165,50 +165,50 @@ function esPrimo(numero) {
   if(numero == 2 || numero == 3 || numero == 5) {
     return true
   }
-  else if (numero < 2){
+  else if (numero < 2) {
     return false
   }
-  for(var i = 0; i < 3; i++){
-    if(i == 0 && numero % 2 == 0){
+  for(var i = 0; i < 3; i++) {
+    if(i == 0 && numero % 2 == 0) {
       return false
     }
-    else if(i == 1 && numero % 3 == 0){
+    else if(i == 1 && numero % 3 == 0) {
       return false
     }
-    else if(i == 2 && numero % 5 == 0){
+    else if(i == 2 && numero % 5 == 0) {
       return false
     }
-    else{
+    else {
     return true
     }
   }
 }
 
-function esVerdadero(valor){
+function esVerdadero(valor) {
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
-  if(valor == true) {
+  if (valor == true) {
     return "Soy verdadero"
   }
-  else{
+  else {
     return "Soy falso"
   }
 
 }
 
-function tablaDelSeis(){
+function tablaDelSeis() {
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí
   let array = new Array(11)
-  for(let i = 0;i < 11;i++){
+  for (let i = 0;i < 11;i++) {
     array[i] = 6 * i
   }    
   return array
 }
 
-function tieneTresDigitos(numero){
+function tieneTresDigitos(numero) {
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
   return numero > 99 && numero < 1000
@@ -222,7 +222,7 @@ function doWhile(numero) {
   let i = 0;
   let num = numero;
 
-  do{
+  do {
     num = num + 5
     i++
   }
