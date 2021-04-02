@@ -168,20 +168,12 @@ function esPrimo(numero) {
   else if (numero < 2) {
     return false
   }
-  for(var i = 0; i < 3; i++) {
-    if(i == 0 && numero % 2 == 0) {
+  for(var i = 2; i < 5; i++) {
+    if(numero % i == 0) {
       return false
-    }
-    else if(i == 1 && numero % 3 == 0) {
-      return false
-    }
-    else if(i == 2 && numero % 5 == 0) {
-      return false
-    }
-    else {
-    return true
     }
   }
+  return true
 }
 
 function esVerdadero(valor) {
