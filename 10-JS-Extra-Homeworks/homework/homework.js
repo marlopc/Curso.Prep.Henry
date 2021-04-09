@@ -11,7 +11,7 @@ function deObjetoAmatriz(objeto){
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
   
-  return Object.entries(objeto)
+  return Object.entries(objeto);
 }
 
 
@@ -29,7 +29,7 @@ function numberOfCharacters(string) {
     else {
       acc[el] = 1;
     }
-    return acc
+    return acc;
   }, {})
 }
 
@@ -72,10 +72,10 @@ function capicua(numero){
   //Escribe tu código aquí
   
   if(numero == numero.toString().split('').reverse().join('')) {
-    return 'Es capicua'
+    return 'Es capicua';
   }
   else {
-    return 'No es capicua'
+    return 'No es capicua';
   }
 }
 
@@ -85,22 +85,15 @@ function deleteAbc(cadena){
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
 
-  let array = cadena.split('');
-  for (x in array) {
-    if (array[x].toLowerCase() == 'a' || array[x].toLowerCase() == 'b' || array[x].toLowerCase() == 'c') {
-      delete array[x]
-    }
-  }
-  return array.join('');
+  return cadena.split('').filter(x => x != 'a' && x != 'b' && x != 'c').join('');  
 }
-
 
 function sortArray(arr) {
   //La función recibe una matriz de strings. Ordena la matriz en orden creciente de longitudes de cadena
   //Ej: Recibe ---> ["You", "are", "beautiful", "looking"] || Devuelve ---> [“You", "are", "looking", "beautiful"]
   //Escribe tu código aquí
 
-  return arr.sort((a, b) => a.length - b.length)
+  return arr.sort((a, b) => a.length - b.length);
 }
 
 
@@ -115,7 +108,7 @@ function buscoInterseccion(arreglo1, arreglo2){
     if (arreglo2.includes(el)) {
       acc.push(el);
     }
-    return acc
+    return acc;
   }, [])
 }
 
