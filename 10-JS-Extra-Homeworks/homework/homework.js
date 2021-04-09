@@ -11,13 +11,7 @@ function deObjetoAmatriz(objeto){
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
   
-  let array = [];
-
-  for (x in objeto) {
-    array.push([x, objeto[x]]);
-  }
-
-  return array;
+  return Object.entries(objeto)
 }
 
 
@@ -117,13 +111,12 @@ function buscoInterseccion(arreglo1, arreglo2){
   //Aclaración: los arreglos no necesariamente tienen la misma longitud
   //Escribe tu código aquí  
 
-  let array = [];
-  for (x in arreglo1) {
-    if(arreglo2.includes(arreglo1[x])) {
-      array.push(arreglo1[x]);
+  return arreglo1.reduce((acc,el) => {
+    if (arreglo2.includes(el)) {
+      acc.push(el);
     }
-  }
-  return array;
+    return acc
+  }, [])
 }
 
 
